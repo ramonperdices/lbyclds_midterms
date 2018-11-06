@@ -5,6 +5,6 @@ from django.urls import path
 appname = 'services'
 
 urlpatterns = [
-    path('', views.Home),
+    path('', views.Home, name='home'),
     path('maps/', views.maps, name='maps'),
 ]
