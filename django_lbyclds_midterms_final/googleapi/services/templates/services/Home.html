@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google App Services</title>
+</head>
+
+
+<style>
+.text {
+     font-family: "Nunito ExtraLight", sans-serif;
+}
+
+#dontmindthis {
+    padding-top: 180px;
+}
+.content {
+    max-width: 750px;
+    margin: auto;
+}
+#button1 {
+    background-color: #008000;
+}
+#button2 {
+    background-color: dodgerblue ;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<div id="dontmindthis"></div>
+<div class="content">
+    <div class="text" >Choose a google service:<div>
+    <body>
+        <a href="{% url 'maps' %}"><button id=button2 class="button"><span>Maps</span></button></a>
+        <button id=button1 class="button"><span>Sheets</span></button>
+        <button class="button"><span>Mail</span></button>
+    </body>
+</div>
+</html>
